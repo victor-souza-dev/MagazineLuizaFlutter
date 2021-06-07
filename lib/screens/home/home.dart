@@ -27,7 +27,11 @@ class _HomeState extends State<Home> {
             ],
           ),
         ),
-        body: ListView.separated(
+        body: Column(
+          children: [
+            Image.asset("assets/imgs/linha.jpg", width: 750, fit: BoxFit.cover,),
+            Expanded(
+              child: ListView.separated(
             itemBuilder: builder,
             separatorBuilder: (BuildContext context, int index) {
             return SizedBox(
@@ -36,6 +40,9 @@ class _HomeState extends State<Home> {
             },
             itemCount: listProducts.length,
         ),
+            )
+          ],
+        )
     );
   }
 
